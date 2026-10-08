@@ -1,0 +1,15 @@
+{
+  "name": "orchetta",
+  "displayName": "Orchetta",
+  "version": "0.1.0",
+  "description": "Manage Orchetta customer journeys from Cursor's agent. Build a journey, restructure its stages and steps, put needs, pain points and solutions on the right steps, and review it for gaps.",
+  "author": {
+    "name": "Orchetta",
+    "email": "support@orchetta.com"
+  },
+  "homepage": "https://orchetta.com",
+  "repository": "https://github.com/orchetta/cursor-plugin",
+  "license": "MIT",
+  "keywords": ["orchetta", "customer-journey", "journey-mapping", "product", "pain-points", "mcp"],
+  "logo": "assets/logo.svg"
+}

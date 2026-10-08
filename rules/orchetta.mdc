@@ -1,0 +1,30 @@
+---
+description: How to read and change an Orchetta customer journey workspace through the orchetta MCP tools. Apply whenever a task mentions Orchetta, a customer journey, journey map, stage, step, need, pain point, opportunity, solution, goal or metric, or calls an orchetta tool.
+alwaysApply: false
+---
+
+# Working with Orchetta
+
+Orchetta is a customer journey platform. A workspace holds journeys; a journey is a sequence of stages, and a stage a sequence of steps the customer goes through. Records of several kinds sit on steps: needs, pain points, gains, opportunities, solutions, goals, metrics, actions and touchpoints, plus labeling records such as profiles (personas), products and brands. The `orchetta` MCP tools are the only source of truth about a workspace. Never invent journeys, steps, records or numbers.
+
+For anything beyond a quick read, hand the work to the `journey-manager` agent or use the matching skill: `build-journey`, `restructure-journey`, `add-insights` or `review-journey`.
+
+## First call
+
+Call `list_organizations` before anything else. Every other tool takes an `organization_id` from it. If the person belongs to more than one workspace and hasn't named one, ask which, then keep using it for the rest of the session.
+
+## Reading
+
+Start broad, then narrow. `organization_overview` says what a workspace holds. `list_journeys` lists journeys and `get_journey` returns one whole, with stages, steps and what is attached to each step. `list_resource_kinds` says which kinds of record the workspace defines and their fields; `list_resources` lists one kind's records with their values. `search_help_guides` answers questions about how Orchetta itself works.
+
+Quote names exactly and keep the kinds straight: a pain point is not a need, a goal is not a metric. Say which journey, stage and step something sits on. Tool results carry a link to the page in Orchetta; give it.
+
+## Writing
+
+- Read before you write: fetch the journey or record you are about to change.
+- Say in one sentence what you are about to create or change, and where, before you do it.
+- Names are short phrases; a step's description is a one-line subtitle, because the board shows two lines and cuts the rest.
+- Search before creating, so the map doesn't fill with near-duplicates.
+- `remove_*` and `delete_*` are irreversible. Confirm each one explicitly; one confirmation never covers several removals.
+- Change only what was asked about.
+- `ask_user` and `show_page` draw inside Orchetta's own app and do nothing useful here. Ask questions in chat instead.
